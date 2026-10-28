@@ -21,7 +21,9 @@
   <a href="https://huggingface.co/mashbox-labs"><img alt="Hugging Face" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-mashbox--labs-ffcc4d"></a>
 </p>
 
-Our first open model port runs on Google Cloud TPU, and anyone can run it: a 27B language model on a single chip. A world model you steer in the browser is coming soon. Start with **[mashbox](https://github.com/mashbox-labs/mashbox)**:
+Our first open model port runs on Google Cloud TPU, and anyone can run it: a 27B language model on a single chip. A world model you steer in the browser is coming soon. Start with **[mashbox](https://github.com/mashbox-labs/mashbox)**.
+
+On a Google Cloud TPU VM (the [setup guide](https://mashbox.gg/docs/google-cloud) gets you there from a new Google account):
 
 ```bash
 python3 -m pip install uv && python3 -m uv tool install --python 3.12 "mashbox[tpu]"
@@ -33,7 +35,7 @@ python3 -m pip install uv && python3 -m uv tool install --python 3.12 "mashbox[t
 <!-- models:start -->
 | Model | What it does | Measured | Chip tests |
 |---|---|---|---|
-| **[Qwen3.8-27B](https://github.com/mashbox-labs/mashbox/tree/v0.1.0/src/mashbox/models/qwen3_8_27b)** by Qwen | text in, text out | Decode speed, 1 request: **38.6 tokens/s** (TPU v6e-1) | TPU v6e (2026-10-28) |
+| **[Qwen3.8-27B](https://github.com/mashbox-labs/mashbox/tree/v0.1.1/src/mashbox/models/qwen3_8_27b)** by Qwen | text in, text out | **38.1 vs 31.4 tok/s** vs vLLM on the same chip, 1 request at a time (TPU v6e-1) | TPU v6e (2026-10-28) |
 
 Coming soon: **Hy-Nomas** by Tencent Hunyuan (world model: text and movement keys in, video out).
 <!-- models:end -->
