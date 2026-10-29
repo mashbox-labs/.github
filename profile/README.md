@@ -35,9 +35,9 @@ python3 -m pip install uv && python3 -m uv tool install --python 3.12 "mashbox[t
 <!-- models:start -->
 | Model | What it does | Measured | Chips |
 |---|---|---|---|
-| **[Hy-Nomas](https://github.com/mashbox-labs/mashbox/tree/v0.1.4/src/mashbox/models/hy_nomas)** by Tencent Hunyuan | text and movement keys in, video out | Compute per second of video, quality preset, Tencent decoder, 1.00 = real time: **1.045 s** (TPU v6e-4) | TPU v6e slice (v6e-4) |
-| **[Qwen3.8-27B](https://github.com/mashbox-labs/mashbox/tree/v0.1.4/src/mashbox/models/qwen3_8_27b)** by Qwen | text in, text out | **38.1 vs 31.4 tok/s** vs vLLM on the same chip, 1 request at a time (TPU v6e-1) | TPU v5e, TPU v6e, TPU v6e slice (v6e-4) |
-| **[Track2Rig](https://github.com/mashbox-labs/mashbox/tree/v0.1.4/src/mashbox/models/track2rig)** by MASHBOX Labs<br>Experimental | 3D point tracks in, rig (JSON and glTF) out | **0.784% vs 0.915%** held-out error vs SSDR at the same bone count, synthetic test set with noisy, partly hidden tracks, % of body size, lower is better (CPU (AMD EPYC 7502P)) | TPU v6e |
+| **[Hy-Nomas](https://github.com/mashbox-labs/mashbox/tree/v0.1.5/src/mashbox/models/hy_nomas)** by Tencent Hunyuan | text and movement keys in, video out | Compute per second of video, quality preset, Tencent decoder, 1.00 = real time: **1.045 s** (TPU v6e-4) | TPU v6e slice (v6e-4) |
+| **[Qwen3.8-27B](https://github.com/mashbox-labs/mashbox/tree/v0.1.5/src/mashbox/models/qwen3_8_27b)** by Qwen | text in, text out | **38.1 vs 31.4 tok/s** vs vLLM on the same chip, 1 request at a time (TPU v6e-1) | TPU v5e, TPU v6e, TPU v6e slice (v6e-4) |
+| **[Track2Rig](https://github.com/mashbox-labs/mashbox/tree/v0.1.5/src/mashbox/models/track2rig)** by MASHBOX Labs<br>Experimental | 3D point tracks in, rig (JSON and glTF) out | **0.784% vs 0.915%** held-out error vs SSDR at the same bone count, synthetic test set with noisy, partly hidden tracks, % of body size, lower is better (CPU (AMD EPYC 7502P)) | TPU v6e |
 <!-- models:end -->
 
 Weights are on [Hugging Face](https://huggingface.co/mashbox-labs), named by type with size, bits per weight and measured quality on every card. Claude Code, Codex and Pi can use the LLMs as their model: [Use with coding agents](https://github.com/mashbox-labs/mashbox/blob/main/docs/agents-on-tpu.md). [AGENTS.md](https://github.com/mashbox-labs/mashbox/blob/main/AGENTS.md) gives a coding agent the steps to set up a chip itself.
