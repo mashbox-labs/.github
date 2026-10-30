@@ -40,8 +40,8 @@ Models we port or make ourselves. A BSHJ build is our weights file for the model
 | Model | What it does | Measured | Chips |
 |---|---|---|---|
 | **[Hy-Nomas](https://github.com/mashbox-labs/mashbox/tree/v0.1.5/src/mashbox/models/hy_nomas)** by Tencent Hunyuan | text and movement keys in, video out | Compute per second of video, quality preset, Tencent decoder, 1.00 = real time: **1.045 s** (TPU v6e-4) | TPU v6e slice (v6e-4) |
-| **[Qwen3.8-27B](https://github.com/mashbox-labs/mashbox/tree/v0.1.5/src/mashbox/models/qwen3_8_27b)** by Qwen | text in, text out | **38.1 vs 31.4 tok/s** vs vLLM on the same chip, 1 request at a time (TPU v6e-1) | TPU v5e, TPU v6e, TPU v6e slice (v6e-4) |
-| **[Track2Rig](https://github.com/mashbox-labs/mashbox/tree/v0.1.5/src/mashbox/models/track2rig)** by MASHBOX Labs<br>Experimental | 3D point tracks in, rig (JSON and glTF) out | **0.784% vs 0.915%** held-out error vs SSDR at the same bone count, synthetic test set with noisy, partly hidden tracks, % of body size, lower is better (CPU (AMD EPYC 7502P)) | CPU, TPU v6e |
+| **[Qwen3.8-27B](https://github.com/mashbox-labs/mashbox/tree/v0.1.5/src/mashbox/models/qwen3_8_27b)** by Qwen | text in, text out | **38.1 vs 31.4 tok/s** vs vLLM on the same chip, 1 request at a time; **74.84 tok/s** with speculative decoding (--mtp 2), 1 request at a time, greedy; 37.77 tok/s with it off; **326.6 vs 1,606.7 s** first start to ready, weights on disk, empty compile caches, vs vLLM on the same chip type (TPU v6e-1) | TPU v5e, TPU v6e, TPU v6e slice (v6e-4) |
+| **[Track2Rig](https://github.com/mashbox-labs/mashbox/tree/v0.1.5/src/mashbox/models/track2rig)** by MASHBOX Labs<br>Experimental | 3D point tracks in, rig (JSON and glTF) out | **0.784% vs 0.915%** held-out error vs SSDR at the same bone count, synthetic test set with noisy, partly hidden tracks, % of body size, lower is better; **6.24% vs 7.73%** joint error vs SSDR, % of body size, lower is better (CPU, AMD EPYC 7502P) | CPU, TPU v6e |
 
 **GGUF files that run in our engine**
 
