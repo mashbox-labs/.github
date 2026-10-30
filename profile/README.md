@@ -21,7 +21,7 @@
   <a href="https://huggingface.co/mashbox-labs"><img alt="Hugging Face" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-mashbox--labs-ffcc4d"></a>
 </p>
 
-Our open model ports run on Google Cloud TPU, and anyone can run them: a 27B language model on a single chip, and Hy-Nomas, a world model you steer in the browser, on a TPU v6e-4 slice. Start with **[mashbox](https://github.com/mashbox-labs/mashbox)**.
+We port open models to Google Cloud TPU, and anyone can run them. The table below lists every model in the current mashbox release and the chips it runs on. Start with **[mashbox](https://github.com/mashbox-labs/mashbox)**.
 
 On a Google Cloud TPU VM (the [setup guide](https://mashbox.gg/docs/google-cloud) gets you there from a new Google account):
 
