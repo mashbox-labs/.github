@@ -29,7 +29,7 @@ We make open models run faster and cheaper on Google Cloud TPU, and we build AI 
 
 - **[mashbox](https://github.com/mashbox-labs/mashbox)** is our open-source engine. One install and one command take a model from download to answering on your own TPU, with a server that Claude Code, Codex and Pi can use as their model.
 - **Open models, as they are.** mashbox runs GGUF files from the community without converting them. Families covered so far: Qwen, Llama, Gemma, Mistral, Granite, Falcon and EXAONE. Every file, and how far it has been checked, is on [Supported models](https://mashbox.gg/docs/supported-models).
-- **Our own builds.** Open models we port and tune with our own TPU kernels. The weights are on [Hugging Face](https://huggingface.co/mashbox-labs), with size, bits per weight and measured numbers on every port's card.
+- **Our own builds.** Open models we port to TPU and other accelerated hardware, and models we trained ourselves. Each has a repo on [Hugging Face](https://huggingface.co/mashbox-labs) whose card shows how to run it, with measured numbers where we have them.
 - **AI and gaming.** 3D creatures from a text prompt, motion for any creature's skeleton, and [Steer](https://mashbox.gg/steer): watch which neurons fire as a model reads your text, then turn them up or down. More on [mashbox.gg](https://mashbox.gg) and [Research](https://mashbox.gg/research).
 
 ### Start
